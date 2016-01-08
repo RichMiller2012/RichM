@@ -1,2 +1,2 @@
-test/*.pyc
-source/*.pyc
+/test/*.pyc
+/source/*.pyc
