@@ -1,11 +1,5 @@
-nose2
-
-coverage
-
-mock
-
-sphinx
-
-docutils
-
-nose2-cov==1.0a4
+#0001 The system shall be able to determine if a triangle is scalene, equilateral or isosceles
+#0002 The system shall accept three triangle sides as length in either float or integers
+#0003 The system shall be able to determine the type of quadrilateral based on 4 sides and 4 angles
+#0004 The system shall accept quadrilateral sides as floats or integers
+#0005 The system shall accept quadrilateral angles as floats or integers
