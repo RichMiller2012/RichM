@@ -6,6 +6,7 @@ The following example code determines if a set of 3 sides of a triangle is equil
 """
 
 def get_triangle_type(a=0, b=0, c=0):
+    print "entering get_triangle type"
     """
     Determine if the given triangle is equilateral, scalene or Isosceles
 
@@ -50,6 +51,8 @@ def get_triangle_type(a=0, b=0, c=0):
 
 def get_rectangle_type(sides):
     
+    print "entering get_rectangle_type"
+
     if isinstance(sides, (tuple, list)) and len(sides) == 4:
         d = sides[3]
         c = sides[2]

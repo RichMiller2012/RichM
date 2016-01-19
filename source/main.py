@@ -1,5 +1,5 @@
-﻿from source.question_answer import QA
-from source.shape_checker import get_triangle_type, get_rectangle_type, get_four_sided_shape_type 
+﻿from question_answer import QA
+from shape_checker import get_triangle_type, get_rectangle_type, get_four_sided_shape_type 
 
 
 import difflib
@@ -21,7 +21,7 @@ class Interface(object):
 
         self.question_answers = {
             'What type of triangle is ': QA('What type of triangle is ', get_triangle_type),
-            'What type of quadrilateral is ': QA('What type of quadrilateral is ', get_four_sided_shape_type),
+            'What type of quadrilateral is ': QA('What type of rectangular object is ', get_rectangle_type),
         }
         self.last_question = None
 
@@ -39,7 +39,9 @@ class Interface(object):
                 try:
                     args.append(float(keyword))
                 except:
-                    parsed_question += "{0} ".format(keyword)
+                    if(keyword != ''):                   
+                        parsed_question += "{0} ".format(keyword)
+            print parsed_question
             parsed_question = parsed_question[0:-1]
             self.last_question = parsed_question
             
@@ -49,11 +51,10 @@ class Interface(object):
                         return answer.value
                     else:
                         try:
-                            return answer.function(*args)
+                            return answer.function(args)
                         except:
                             raise Exception("Too many extra parameters")
-                else:
-                     return UNKNOWN_QUESTION
+            return UNKNOWN_QUESTION
 
     def teach(self, answer=""):
         if self.last_question is None:

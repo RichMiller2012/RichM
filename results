@@ -1,17 +1,23 @@
 The system shall provide a means of providing an answer to the previously asked question.
 
+   test_previously_asked_question
 If no previous question has been asked the system shall respond with "Please ask a question first"
+   test_no_previous_questions_asked
 The system shall exclude any number value from match code and provide the values to generator function (if one exists)
 
+   test_ask_check_less_90_percent_match
 The system shall accept and store answers to previous questions in the form of a string or a function pointer and store it as the generator function.
 
+   test_previously_asked_question
 The system shall break a question down into words separated by space
 
-   test_ask_breaks_down_words
+   test_ask_breaks_down_words_by_space
 If no previous question has been asked the system shall respond with "Please ask a question first"
 
+   test_no_previous_questions_asked
 The system shall accept and store answers to previous questions in the form of a string or a function pointer and store it as the generator function.
 
+   test_previously_asked_question
 The system shall accept questions in the form of strings and attempt to answer them
 
    test_ask_takes_string_and_answers_valid_string
@@ -185,6 +191,7 @@ The system shall be able to determine the type of quadrilateral based on 4 sides
    test_get_rectangle_type_two_invalid_sides_tuple
 When a valid match is determined the system shall return the answer
 
+   test_ask_checks_90_percent_match
 The system shall be able to determine if a triangle is scalene, equilateral or isosceles
 
    test_get_triangle_equilateral_all_float
@@ -226,13 +233,17 @@ The system shall be able to determine if a triangle is scalene, equilateral or i
    test_get_triangle_type_string_values
 The system shall determine an answer to a question as a correct if the keywords provide a 90% match and return the answer
 
+   test_ask_check_less_90_percent_match
    test_ask_checks_90_percent_match
 When no valid match is determined the system shall return "I don't know, please provide the answer"
 
+   test_check_unknown_question
 The system shall provide a means of updating an answer to the previously asked question.
 
+   test_update_answer_to_previous_question
 If an attempt is made to provide an answer to an already answered question the system shall respond with "I don\'t know about that. I was taught differently" and not update the question
 
+   test_previous_question_teach_different_answer
 If the system does not detect a valid question keyword it shall return "Was that a question?"
 
    test_ask_takes_string_and_answers_valid_string
