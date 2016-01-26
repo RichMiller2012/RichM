@@ -1,3 +1,34 @@
+STORIES 
+
+* What time is it?
+	test_what_time_is_it
+* return sum of numbers in a set
+	test_return_sum_of_numbers
+* Convert up to ten different units
+	test_convert_up_to_ten_units
+* Hal can't open door
+	test_hal_cant_open_door
+* Convert some units
+	test_convert_some_units
+* return the multiple of all numbers in a set
+	test_return_multiple_of_numbers
+* return lowest number in a set of numbers
+	test_return_lowest_number
+* What is n digit of pi?
+	test_what_is_n_digit_of_pi
+* Please clear memory
+	test_please_clear_memory
+* return the average of a set of numbers
+	test_return_average_numbers
+* what is the fib number?
+	test_what_is_the_fib_number
+ * return highest number in a set of numbers
+	test_return_highest_number
+
+
+
+REQUIREMENTS 
+
 The system shall provide a means of providing an answer to the previously asked question.
 
    test_previously_asked_question

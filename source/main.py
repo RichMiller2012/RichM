@@ -1,6 +1,8 @@
 ﻿from question_answer import QA
+from time import gmtime, strftime
 from shape_checker import get_triangle_type, get_rectangle_type, get_four_sided_shape_type 
-
+from math import pi
+from copy import deepcopy
 
 import difflib
 NOT_A_QUESTION_RETURN = "Was that a question?"
@@ -23,6 +25,7 @@ class Interface(object):
             'What type of triangle is ': QA('What type of triangle is ', get_triangle_type),
             'What type of quadrilateral is ': QA('What type of rectangular object is ', get_rectangle_type),
         }
+        self.original_questions = deepcopy(self.question_answers)
         self.last_question = None
 
     def ask(self, question=""):
@@ -72,3 +75,82 @@ class Interface(object):
 
     def __add_answer(self, answer):
         self.question_answers[self.last_question] = QA(self.last_question, answer)
+
+    """ lab3 additional test method """
+        
+    def getTime(self):
+        return strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
+    def fib(self, n):
+        if n == 0:
+            return 0
+        elif n == 1:
+             return 1
+        else:
+            return self.fib(n-1) + self.fib(n-2)
+
+    def clearMemory(self):
+        self.question_answers = self.original_questions  
+           
+    def askOpen(self, open, user):
+        if open == "Open the door hal":
+            return "I'm afraid I can't do that " + user
+
+    def pi(self, n):
+        return None
+
+
+    def convert(self, num, fromUnit, toUnit):
+
+        conversions = {
+              "km":{"m":1000},
+              "m":{"cm":100},
+              "dm":{"cm":10},
+              "cm":{"mm":100},
+              "mm":{"nm":1000},
+              "mi":{"ft":5280},
+              "ft":{"in":12},
+              "yd":{"ft":3},
+              "g":{"mg":1000},
+              "kg":{"g":1000},
+              "mt":{"kg":1000}  
+        }
+
+        return conversions[fromUnit][toUnit] * num
+
+    def avg(self, list):
+        ans = 0
+        for num in list:
+            ans += num
+        return ans/(len(list))
+
+    def high(self, list):
+        ans = 0
+        for num in list:
+            if num > ans:
+                ans = num
+        return ans
+
+    def low(self, list):
+        ans = list[0]
+        for num in list:
+            if num < ans:
+                ans = num
+        return ans
+
+    def sum(self, list):
+        ans = 0;
+        for num in list:
+            ans += num
+        return ans
+
+    def mult(self, list):
+        ans = 1
+        for num in list:
+            ans *= num
+        return ans
+
+
+                
+                
+            
