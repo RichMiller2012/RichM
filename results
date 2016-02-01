@@ -14,8 +14,6 @@ STORIES
 	test_return_multiple_of_numbers
 * return lowest number in a set of numbers
 	test_return_lowest_number
-* What is n digit of pi?
-	test_what_is_n_digit_of_pi
 * Please clear memory
 	test_please_clear_memory
 * return the average of a set of numbers

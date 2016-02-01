@@ -3,6 +3,7 @@ from time import gmtime, strftime
 from shape_checker import get_triangle_type, get_rectangle_type, get_four_sided_shape_type 
 from math import pi
 from copy import deepcopy
+from useful_question import get_prime_number, valid_phone_number, solve_quadratic, highest_common_factor, set_ops
 
 import difflib
 NOT_A_QUESTION_RETURN = "Was that a question?"
@@ -18,13 +19,18 @@ class Interface(object):
         self.where_dict = {}
         self.who_dict = {}
 
-        self.keywords = ['How', 'What', 'Where', 'Who', "Why"]
+        self.keywords = ['How', 'What', 'Where', 'Who', "Why", "Is"]
         self.question_mark = chr(0x3F)
 
         self.question_answers = {
             'What type of triangle is ': QA('What type of triangle is ', get_triangle_type),
             'What type of quadrilateral is ': QA('What type of rectangular object is ', get_rectangle_type),
-        }
+            'What is the nth prime number ' : QA('What is the nth prime number ', get_prime_number),
+            'Is this a valid phone number ' : QA('Is this a valid phone number ', valid_phone_number),
+            'What are the quadratic results ' : QA('What are the quadratic results ', solve_quadratic),
+            'What is the highest common factor of these two numbers ' : QA('What is the highest common factor of these two numbers ', highest_common_factor),
+            'What is the result set of these two list and operation ' : QA('What is the result set of these two list and operation ', set_ops)
+            }
         self.original_questions = deepcopy(self.question_answers)
         self.last_question = None
 
@@ -54,6 +60,7 @@ class Interface(object):
                         return answer.value
                     else:
                         try:
+                            print args
                             return answer.function(args)
                         except:
                             raise Exception("Too many extra parameters")

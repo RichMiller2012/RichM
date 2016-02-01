@@ -1,0 +1,230 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">63%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>937</td>
+                <td>348</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="589 937">63%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="source___init___py.html">source\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="source_main_py.html">source\main.py</a></td>
+                <td>107</td>
+                <td>36</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="71 107">66%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="source_question_answer_py.html">source\question_answer.py</a></td>
+                <td>8</td>
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 8">75%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="source_shape_checker_py.html">source\shape_checker.py</a></td>
+                <td>87</td>
+                <td>15</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="72 87">83%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="source_useful_question_py.html">source\useful_question.py</a></td>
+                <td>54</td>
+                <td>7</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="47 54">87%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test_Tdd_test_py.html">test\Tdd_test.py</a></td>
+                <td>61</td>
+                <td>16</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="45 61">74%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test___init___py.html">test\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test_four_sided_shape_checker_test_py.html">test\four_sided_shape_checker_test.py</a></td>
+                <td>220</td>
+                <td>108</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="112 220">51%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test_question_answer_test_py.html">test\question_answer_test.py</a></td>
+                <td>101</td>
+                <td>26</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="75 101">74%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test_rectangle_checker_test_py.html">test\rectangle_checker_test.py</a></td>
+                <td>79</td>
+                <td>25</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="54 79">68%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="test_shape_checker_test_py.html">test\shape_checker_test.py</a></td>
+                <td>146</td>
+                <td>45</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="101 146">69%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tests___init___py.html">tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tests_plugins_ReqTracer_py.html">tests\plugins\ReqTracer.py</a></td>
+                <td>45</td>
+                <td>39</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 45">13%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tests_plugins___init___py.html">tests\plugins\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="tests_plugins_coverage_py.html">tests\plugins\coverage.py</a></td>
+                <td>29</td>
+                <td>29</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 29">0%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.org">coverage.py v4.0.3</a>,
+            created at 2016-01-31 16:13
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

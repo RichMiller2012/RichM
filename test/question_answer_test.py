@@ -1,6 +1,8 @@
-﻿from source.main import Interface
+﻿from useful_question import valid_phone_number, set_ops
 from tests.plugins.ReqTracer import requirements
 from unittest import TestCase
+from source.main import Interface
+
 
 NOT_A_QUESTION_RETURN = "Was that a question?"
 UNKNOWN_QUESTION = "I don't know, please provide the answer"
@@ -92,6 +94,48 @@ class QATest(TestCase):
        interface.correct("A small one")
        self.assertEqual(interface.question_answers[interface.last_question].question, "What type of circle is")
        self.assertEqual(interface.question_answers[interface.last_question].value, "A small one")
+
+    def test_find_prime(self):
+        interface = Interface()
+        result = interface.ask("What is the nth prime number 7 ?")
+        self.assertEqual(result, 11)
+        result = interface.ask("What is the nth prime number 3 ?")
+        self.assertEqual(result, 3)
+        result = interface.ask("What is the nth prime number -1 ?")
+        self.assertEqual(result, "input error")
+
+        
+    def test_valid_phone_number(self):
+        result = valid_phone_number("971-400-3171")
+        self.assertEqual(result, "valid")
+        result = valid_phone_number("invalid phone")
+        self.assertEqual(result, "invalid")
+
+    def test_solve_quadratic(self):
+        interface = Interface()
+        result = interface.ask("What are the quadratic results 1 2 1 ?")
+        self.assertEqual(result, "(-1+0j) and (-1+0j)")
+
+    def test_highest_common_factor(self):
+        interface = Interface()
+        result = interface.ask("What is the highest common factor of these two numbers 10 20 ?")
+        self.assertEqual(result, 10)
+        result = interface.ask("What is the highest common factor of these two numbers 20 10 ?")
+        self.assertEqual(result, 10)
+
+    def test_set_ops(self):   
+        result = set_ops({1,2,3},{2,3,4},"union")
+        self.assertEqual(result, "answer: set([1, 2, 3, 4])")  
+        result = set_ops({1,2,3},{2,3,4},"intersection")  
+        self.assertEqual(result, "answer: set([2, 3])")
+        result = set_ops({1,2,3},{2,3,4},"difference")
+        self.assertEqual(result, "answer: set([1])")
+        result = set_ops({1,2,3},{2,3,4},"invalid")
+        self.assertEqual(result, "invalid operation")
+        result = set_ops({1,2,3}, [1,2,3], "union")
+        self.assertEqual(result, "please input two lists")
+
+
 
    
           

@@ -30,9 +30,9 @@ class TddTest(TestCase):
         interface = Interface()
         interface.ask("What type of circle is 9 ?")
         interface.teach("A big one")
-        self.assertEqual(len(interface.question_answers), 3)
+        self.assertEqual(len(interface.question_answers), 8)
         interface.clearMemory()
-        self.assertEqual(len(interface.question_answers), 2)
+        self.assertEqual(len(interface.question_answers), 7)
 
     @story("* Hal can't open door")
     def test_hal_cant_open_door(self):
