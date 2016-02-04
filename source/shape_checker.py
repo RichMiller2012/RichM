@@ -68,9 +68,6 @@ def get_rectangle_type(sides):
         c = values[2]
         d = values[3]
 
-    else:
-        return 'invalid'
-
     if not (isinstance(a, (int, float)) and isinstance(b, (int, float)) and isinstance(c, (int, float)) and isinstance(d, (int, float))):
         return 'invalid'
     
@@ -100,9 +97,6 @@ def get_four_sided_shape_type(sides, angles):
         side2 = values[1]
         side1 = values[0]
 
-    else:
-        return 'invalid'
-
     if isinstance(angles, (tuple, list)) and len(angles) == 4:
         angle4 = angles[3]
         angle3 = angles[2]
@@ -117,9 +111,6 @@ def get_four_sided_shape_type(sides, angles):
         angle3 = values[2]
         angle2 = values[1]
         angle1 = values[0]
-
-    else:
-        return 'invalid'
 
     if angle1 + angle2 + angle3 + angle4 != 360:
         return 'disconnected'

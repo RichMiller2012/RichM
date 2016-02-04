@@ -77,7 +77,6 @@ The system shall accept quadrilateral sides as floats or integers
    test_get_four_sided_shape_type_rectangle_list_int
    test_get_four_sided_shape_type_rhombus_float
    test_get_four_sided_shape_type_rhombus_int
-   test_get_four_sided_shape_type_rhombus_list_float
    test_get_four_sided_shape_type_rhombus_list_int
    test_get_four_sided_shape_type_square_list_float
    test_get_four_sided_shape_type_square_list_int
@@ -125,7 +124,6 @@ The system shall accept quadrilateral angles as floats or integers
    test_get_four_sided_shape_type_rectangle_list_int
    test_get_four_sided_shape_type_rhombus_float
    test_get_four_sided_shape_type_rhombus_int
-   test_get_four_sided_shape_type_rhombus_list_float
    test_get_four_sided_shape_type_rhombus_list_int
    test_get_four_sided_shape_type_square_list_float
    test_get_four_sided_shape_type_square_list_int
@@ -194,7 +192,6 @@ The system shall be able to determine the type of quadrilateral based on 4 sides
    test_get_four_sided_shape_type_rectangle_list_int
    test_get_four_sided_shape_type_rhombus_float
    test_get_four_sided_shape_type_rhombus_int
-   test_get_four_sided_shape_type_rhombus_list_float
    test_get_four_sided_shape_type_rhombus_list_int
    test_get_four_sided_shape_type_square_list_float
    test_get_four_sided_shape_type_square_list_int

@@ -146,7 +146,11 @@ class TestGetRectangleType(TestCase):
         self.assertEqual(result, INVALID)
     
 
-
+        """ 100% coverage methods """
+    def test_get_rectangle_type_rectangle_invalid_string(self):
+        input = ('a', 'b', 'c', 'd')
+        result = get_rectangle_type(input)
+        self.assertEqual(result, INVALID)
 
 
         

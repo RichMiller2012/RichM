@@ -370,3 +370,11 @@ class GetFourSidedShapeTypeTest(TestCase):
         angles = (100, 90, 80, 90)
         result = get_four_sided_shape_type(sides, angles)
         self.assertEquals(result, INVALID)
+
+    """ 100% coverage methods """
+    def test_get_four_sided_shape_type_rhombus_list_float(self):
+       sides = {'a':1.123, 'b':1.123, 'c':1.123, 'd':1.123}
+       angles = {'a':50, 'b':50, 'c':130, 'd':130}
+       result = get_four_sided_shape_type(sides, angles)
+       self.assertEquals(result, RHOMBUS)
+

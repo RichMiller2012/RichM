@@ -1,7 +1,8 @@
-﻿from useful_question import valid_phone_number, set_ops
+﻿from useful_question import valid_phone_number, set_ops, pi
 from tests.plugins.ReqTracer import requirements
 from unittest import TestCase
 from source.main import Interface
+from decimal import *
 
 
 NOT_A_QUESTION_RETURN = "Was that a question?"
@@ -134,6 +135,17 @@ class QATest(TestCase):
         self.assertEqual(result, "invalid operation")
         result = set_ops({1,2,3}, [1,2,3], "union")
         self.assertEqual(result, "please input two lists")
+
+        """ completing code coverage """
+
+    def test_not_a_string(self):
+        interface = Interface()
+        with self.assertRaises(Exception):
+            interface.ask(1)
+
+    def test_pi_n(self):
+        answer = pi(10)
+        self.assertEqual(answer, '3.141592653')
 
 
 

@@ -1,5 +1,6 @@
 ﻿import re
 import cmath
+from decimal import *
 
 
 def get_prime_number(input):
@@ -29,6 +30,18 @@ def valid_phone_number(input):
            return 'valid'
        else:
            return 'invalid'  
+
+def pi(n):
+    getcontext().prec = n
+    pi = Decimal(0)
+    k = 0
+    nValue = "3."
+    while k < n * 2:
+        pi += (Decimal(1)/(16**k))*((Decimal(4)/(8*k+1))-(Decimal(2)/(8*k+4))-(Decimal(1)/(8*k+5))-(Decimal(1)/(8*k+6)))
+        k += 1
+    return str(pi)
+    
+
 
 def solve_quadratic(threeInputs):
     a = threeInputs[0]

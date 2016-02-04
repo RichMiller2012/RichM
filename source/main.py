@@ -3,7 +3,7 @@ from time import gmtime, strftime
 from shape_checker import get_triangle_type, get_rectangle_type, get_four_sided_shape_type 
 from math import pi
 from copy import deepcopy
-from useful_question import get_prime_number, valid_phone_number, solve_quadratic, highest_common_factor, set_ops
+from useful_question import get_prime_number, valid_phone_number, solve_quadratic, highest_common_factor, set_ops, pi
 
 import difflib
 NOT_A_QUESTION_RETURN = "Was that a question?"
