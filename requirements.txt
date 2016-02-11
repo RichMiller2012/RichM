@@ -47,3 +47,37 @@
 #0020 The system shall accept and store answers to previous questions in the form of a string or a function pointer and store it as the generator function.
 
 #0021 If no previous question has been asked the system shall respond with "Please ask a question first"
+
+#0100 The system shall return 'Yes' or 'No' when asked 'Is the <file path> in the repo?
+
+#0110 The system shall return 'no' if not found
+
+#0101 The system shall return one of the following when asked 'What is the status of <file path>?
+
+#0111 The system shall return 'path has been not been checked in' if the condition is so
+
+#0121 The system shall return 'path is a dirty repo' if the condition is so
+
+#0131 The system shall return 'path is up to date' if the condition is so
+
+#0141 The system shall return true if repo is dirty
+
+#0151 The system shall return false if repo is not dirty
+
+#0161 The system shall return true if path has diff files
+
+#0171 The system shall return false if path does not have diff files
+
+#0181 The system shall return true if path has untracked files
+
+#0191 The system shall return false if path has untracked files
+
+#0102 The system shall return '<hash>, <date modified>, <author>' when asked 'What is the deal with <file path>?
+
+#0112 The system shall format the file path for diff files
+
+#0113 The system shall format the file path for untracked files
+
+#0103 The system shall return the repo branch when asked 'What branch is <file path>?
+
+#0104 The system shall return the repo url when asked 'Where did <file path> come from?

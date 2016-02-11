@@ -96,6 +96,7 @@ class QATest(TestCase):
        self.assertEqual(interface.question_answers[interface.last_question].question, "What type of circle is")
        self.assertEqual(interface.question_answers[interface.last_question].value, "A small one")
 
+
     def test_find_prime(self):
         interface = Interface()
         result = interface.ask("What is the nth prime number 7 ?")
