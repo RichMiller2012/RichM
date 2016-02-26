@@ -48,6 +48,8 @@
 
 #0021 If no previous question has been asked the system shall respond with "Please ask a question first"
 
+		**git_utils**
+
 #0100 The system shall return 'Yes' or 'No' when asked 'Is the <file path> in the repo?
 
 #0110 The system shall return 'no' if not found
@@ -81,3 +83,11 @@
 #0103 The system shall return the repo branch when asked 'What branch is <file path>?
 
 #0104 The system shall return the repo url when asked 'Where did <file path> come from?
+
+#0050 When asked a question the system shall output the question to a log file
+
+#0051 When asked a question the system shall output the answer to a log file
+
+#0052 The system shall output questions and answers to the log file in under 50 ms
+
+#0053 The system shall calculate a value of pi 5,000 times within 500ms

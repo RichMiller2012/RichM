@@ -16,6 +16,7 @@ class ReqTracerPlugin(Plugin):
         outputFile.write("REQUIREMENTS \n\n")
 
         for key in Requirements:
+            print key
             outputFile.write(Requirements[key].req_text + '\n')
             for func in Requirements[key].func_name:
                outputFile.write('   ' + func + '\n')
@@ -40,7 +41,7 @@ def requirements(req_list):
         return add_req_and_call
     return wrapper
 
-with open('Requirements.txt') as f:
+with open('requirements.txt') as f:
     for line in f.readlines():
         if '#0' in line:
             req_id, desc = line.split(' ', 1)

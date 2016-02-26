@@ -8,21 +8,24 @@ import os
 class GitTest(TestCase):
 
 
+    @requirements(['#0100'])
     def test_is_file_path_in_repo_no(self):
         os.path.exists = Mock(return_value=False)
         self.assertEqual(is_file_in_repo('path'),'No')
 
 
-    @requirements(['#0100'])
+    
     @patch('git_utils.get_diff_files', return_value=['other_path'])
     @patch('git_utils.get_untracked_files', return_value=['other_path'])
+    @requirements(['#0100'])
     def test_is_file_abs_path_in_repo_yes(self, path, other):
         os.path.exists = Mock(return_value=True)
         os.path.isabs = Mock(return_value=False)
         self.assertEqual(is_file_in_repo('path'), 'Yes')
 
-    @requirements(['#0110'])
+    
     @patch('git_utils.get_diff_files', return_value=['path'])
+    @requirements(['#0110'])
     def test_is_file_other_files(self, get_diff_files):
         os.path.exists = Mock(return_value=True)
         os.path.isabs = Mock(return_value=True)

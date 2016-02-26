@@ -50,7 +50,6 @@ class Interface(object):
                 except:
                     if(keyword != ''):                   
                         parsed_question += "{0} ".format(keyword)
-            print parsed_question
             parsed_question = parsed_question[0:-1]
             self.last_question = parsed_question
             
@@ -60,7 +59,6 @@ class Interface(object):
                         return answer.value
                     else:
                         try:
-                            print args
                             return answer.function(args)
                         except:
                             raise Exception("Too many extra parameters")
@@ -155,9 +153,4 @@ class Interface(object):
         ans = 1
         for num in list:
             ans *= num
-        return ans
-
-
-                
-                
-            
+        return ans          
