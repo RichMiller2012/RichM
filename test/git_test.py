@@ -125,7 +125,7 @@ class GitTest(TestCase):
     def test_func_get_diff_files(self, execute, root):
         os.path.exists = Mock(return_value=True)
         result = get_diff_files('path')
-        self.assertEqual(result, ['root\\file1','root\\file2','root\\file1','root\\file2'])
+        self.assertEqual(result, ['root/file1','root/file2','root/file1','root/file2'])
 
     @requirements(['#0113'])
     @patch('git_utils.git_execute', return_value='file1\nfile2')
@@ -133,7 +133,7 @@ class GitTest(TestCase):
     def test_func_get_untracked_files(self, execute, root):
         os.path.exists = Mock(return_value=True)
         result = get_untracked_files('path')
-        self.assertEqual(result,['root\\file1','root\\file2'])
+        self.assertEqual(result,['root/file1','root/file2'])
 
     @requirements(['#0113'])
     @patch('git_utils.git_execute', return_value='\\folder\\file')

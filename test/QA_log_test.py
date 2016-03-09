@@ -26,7 +26,7 @@ class QALogTests(TestCase):
             ms = question_answer_wrapper(ask + " " + str(10) + " ?")
             total_ms += ms
 
-        self.assertLess(total_ms, 1000)
+        self.assertLess(total_ms, 10000)
 
     @requirements(['#0054'])
     def test_spike_test_system_pi(self):
