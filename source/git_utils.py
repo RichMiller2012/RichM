@@ -253,10 +253,11 @@ def git_execute(params=None, path=os.getcwd()):
     :rtype: str
     """
     print 'execute'
+    print path
+    print params
     p = subprocess.Popen(params,
                          stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE, cwd=path,
-                         universal_newlines=True)
+                         stderr=subprocess.PIPE, cwd=path)
 
     print p
     stdout, stderr = p.communicate()

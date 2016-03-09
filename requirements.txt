@@ -91,3 +91,5 @@
 #0052 The system shall output questions and answers to the log file in under 50 ms
 
 #0053 The system shall calculate a value of pi 5,000 times within 500ms
+
+#0054 The system shall spike test the value of pi
